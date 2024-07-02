@@ -88,7 +88,8 @@ def main():
                     print(f"comment_removal_results: {comment_removal_results}")
                     sys.exit(1) 
 
-                ascii_result = is_ascii(destination_no_comments)
+                # Use file including comments for testing
+                ascii_result = is_ascii(filepath) #prev: ascii_result = is_ascii(destination_no_comments)
 
                 if ascii_result == "Success":
                     print(f"{filepath} has correct encoding.")
